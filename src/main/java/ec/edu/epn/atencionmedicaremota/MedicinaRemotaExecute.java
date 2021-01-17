@@ -127,7 +127,7 @@ public class MedicinaRemotaExecute {
             //Diagnosticar enfermedad
             int indicador_enfermedad = tratamiento.diagnosticar_enfermedad(Sintomas);
             System.out.println("===============================================================");
-            impresion_enfermedad(Enfermedades, indicador_enfermedad);
+            System.out.println(tratamiento.emitir_receta(indicador_enfermedad,Enfermedades));
             System.out.println("===============================================================");
         }
     }
@@ -150,6 +150,3 @@ public class MedicinaRemotaExecute {
         Pacientes.add(new Paciente(nombre,cedula,direccion,correo,contrasenia));
     }
 }
-
-
-
