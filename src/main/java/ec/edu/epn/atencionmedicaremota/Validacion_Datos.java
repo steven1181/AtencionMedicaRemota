@@ -48,22 +48,14 @@ public class Validacion_Datos {
     public boolean validacion_correo(String correo) {
         Pattern pattern = Pattern.compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
                 + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
-
         Matcher mather = pattern.matcher(correo);
-        if (mather.find()==true){
-            return true;
-        }else
-            return false;
+        return mather.find();
     }
 
     public boolean validacion_direccion(String direccion) {
         Pattern pattern = Pattern.compile("^[A][v][.][A-Za-z0-9 -]+[y ][A][v][.][A-Za-z0-9 -]+$");
-
         Matcher mather = pattern.matcher(direccion);
-        if (mather.find()==true){
-            return true;
-        }else
-            return false;
+        return mather.find();
     }
 
 
