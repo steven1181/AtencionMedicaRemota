@@ -65,7 +65,7 @@
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
   <testcase classname="ec.edu.epn.atencionmedicaremota.Validacion_Login_ParametersTest" name="given_parameters_when_validate_cedula_is_correct_then_ok[0]" time="0"/>
-  <testcase classname="ec.edu.epn.atencionmedicaremota.Validacion_Login_ParametersTest" name="given_parameters_when_validate_cedula_is_correct_then_ok[1]" time="0.001"/>
-  <testcase classname="ec.edu.epn.atencionmedicaremota.Validacion_Login_ParametersTest" name="given_parameters_when_validate_cedula_is_correct_then_ok[2]" time="0"/>
+  <testcase classname="ec.edu.epn.atencionmedicaremota.Validacion_Login_ParametersTest" name="given_parameters_when_validate_cedula_is_correct_then_ok[1]" time="0"/>
+  <testcase classname="ec.edu.epn.atencionmedicaremota.Validacion_Login_ParametersTest" name="given_parameters_when_validate_cedula_is_correct_then_ok[2]" time="0.001"/>
   <testcase classname="ec.edu.epn.atencionmedicaremota.Validacion_Login_ParametersTest" name="given_parameters_when_validate_cedula_is_correct_then_ok[3]" time="0"/>
 </testsuite>

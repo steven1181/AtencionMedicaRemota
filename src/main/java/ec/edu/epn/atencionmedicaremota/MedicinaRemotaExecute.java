@@ -60,15 +60,62 @@ public class MedicinaRemotaExecute {
         System.out.println("==================== ATENCION MEDICA REMOTA ===================");
         System.out.println("===============================================================");
         System.out.println("1. Ingresar");
-        System.out.println("2. Salir");
+        System.out.println("2. Registrarse");
+        System.out.println("3. Salir");
+        System.out.println("Ingrese el numero de la opcion que desea realizar: ");
+        System.out.println("Aqui el paciente selecciona la opcion 2. Registrarse\n");
+
+        Validacion_Datos vd = new Validacion_Datos();
+        System.out.println("Ingrese su Nombre: ");
+        System.out.println("El paciente ingresa Alexander Vargas");
+        String nombre = "Alexander Vargas";
+        boolean vnombre = vd.validacion_nombre(nombre);
+        if(!vnombre){
+            System.out.println("nombre no valido");
+        }
+        System.out.println("Ingrese su cedula");
+        System.out.println("El paciente ingresa 1001182136 ");
+        String cedula_ = "1001182136";
+        boolean vcedula = vd.validacion_cedula(cedula_);
+        if (!vcedula){
+            System.out.println("\nCedula no valida");
+        }
+        System.out.println("Ingrese su direccion");
+        System.out.println("El paciente ingresa Av. Antonio Ante y Av. 10 de Agosto S14-178");
+        String direccion = "Av. Antonio Ante y Av. 10 de Agosto S14-178";
+        boolean vdireccion = vd.validacion_direccion(direccion);
+        if (!vdireccion){
+            System.out.println("\nDireccion no valida");
+        }
+        System.out.println("Ingrese su correo");
+        System.out.println("El paciente ingresa alexander.vargas@epn.edu.ec");
+        String correo = "alexander.vargas@epn.edu.ec";
+        boolean vcorreo = vd.validacion_correo(correo);
+        if (!vcorreo){
+            System.out.println("\nCorreo no valido");
+        }
+        System.out.println("Ingrese su contraseña");
+        System.out.println("El paciente ingresa alexander123");
+        String contrasenia_ = "alexander123";
+
+        if (vnombre==true && vcedula==true && vdireccion==true && vcorreo==true){
+            agregar_pacientes(Pacientes,nombre,cedula_,direccion,correo,contrasenia_);
+        }
+
+        System.out.println("===============================================================");
+        System.out.println("==================== ATENCION MEDICA REMOTA ===================");
+        System.out.println("===============================================================");
+        System.out.println("1. Ingresar");
+        System.out.println("2. Registrarse");
+        System.out.println("3. Salir");
         System.out.println("Ingrese el numero de la opcion que desea realizar: ");
         System.out.println("Aqui el paciente selecciona la opcion 1. Ingresar\n");
         System.out.println("Ingrese su cedula: ");
-        System.out.println("El paciente ingresa la cedula 1726746595");
-        String cedula = "1726746595";
+        System.out.println("El paciente ingresa la cedula 1001182136");
+        String cedula = "1001182136";
         System.out.println("Ingrese su contrasenia: ");
-        System.out.println("El paciente ingresa la contraseña: steven123");
-        String contrasenia = "steven123";
+        System.out.println("El paciente ingresa la contraseña: alexander123");
+        String contrasenia = "alexander123";
         System.out.println("El sistema valida la informacion y muestra la pagina de inicio y los sintomas");
         int indice_paciente = validacion_paciente(Pacientes, cedula, contrasenia);
 
@@ -103,5 +150,6 @@ public class MedicinaRemotaExecute {
         Pacientes.add(new Paciente(nombre,cedula,direccion,correo,contrasenia));
     }
 }
+
 
 
